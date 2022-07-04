@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<h1 id="allnum"></h1>
+<body>
+
+  <h1>소수판별 프로그램입니다.</h1>
+  <input type="text" placeholder="숫자를 입력해주세요"  id="num">
+  <button onclick = "display()"> 확인</button>
+  <div>결과: <span id="result">  </span> </div>
+  
+  <script>
+    function display() {
+    var  a = document.getElementById('num').value;
+    
+    var number = Number(a);  // 사용자 입력값
+    var result = document.getElementById('result');         // 결과창
+ 
+    for ( i=2; i<number;i++){
+      //if(number%i === 0){
+        //result.innerHTML = number+ '은(는) 소수가 아닙니다.';
+        //return //-- 정상
+         break // -- 모두 소수라고 나옴 ( i 가 2,2,3,2,5,2,7,2,3)
+     // }
+      //return // -- 홀수가 나왔을때 함수 실행이 되지않음
+     // break   //-- 모두 소수라고 나옴 (i가 모두 2로나옴)
+    }
+    console.log(i,number)
+     result.innerHTML= number + '은(는) 소수 입니다.';
+  }
+
+  </script>
+  
+</body>
+</html>
